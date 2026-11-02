@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Hit Cafe — Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Star Hit Cafe</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="catalog.html" class="nav-link active" aria-current="page">Каталог</a></li>
+          <li><a href="product.html" class="nav-link">Товар</a></li>
+          <li><a href="order.html" class="nav-link">Заказ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-content">
+    <h1 class="page-title">Каталог товаров</h1>
+    
+    <div class="catalog-layout">
+      <aside class="filters">
+        <h2>Фильтры</h2>
+        <form>
+          <label><input type="checkbox"> Популярные</label>
+          <label><input type="checkbox"> Новинки</label>
+          <button type="button" class="btn">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-products">
+        <div class="products-grid">
+          <article class="product-card">
+            <img src="images/coffee-1.jpg" alt="Кофе 1" class="card-img">
+            <h3>Кофе 1</h3>
+            <a href="product.html" class="btn">Подробнее</a>
+          </article>
+          <article class="product-card">
+            <img src="images/coffee-2.jpg" alt="Кофе 2" class="card-img">
+            <h3>Кофе 2</h3>
+            <a href="product.html" class="btn">Подробнее</a>
+          </article>
+          <article class="product-card">
+            <img src="images/coffee-3.jpg" alt="Кофе 3" class="card-img">
+            <h3>Кофе 3</h3>
+            <a href="product.html" class="btn">Подробнее</a>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект.</p>
+  </footer>
+</body>
+</html>

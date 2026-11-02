@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактная информация учебного интернет-кафе Star Hit Cafe.">
+  <title>Star Hit Cafe — Контакты</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Star Hit Cafe - на главную">Star Hit Cafe</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+          <li><a href="product.html" class="nav-link">Товар</a></li>
+          <li><a href="order.html" class="nav-link">Заказ</a></li>
+          <li><a href="contacts.html" class="nav-link active" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-content">
+    <h1 class="page-title">Контакты</h1>
+    
+    <div class="contacts-layout">
+      <section class="contact-info">
+        <h2>Наши контакты</h2>
+        <ul class="info-list">
+          <li><strong>Телефон:</strong> +7 (900) 000-00-00</li>
+          <li><strong>E-mail:</strong> info@example.com</li>
+          <li><strong>Адрес:</strong> г. Москва, учебный проект</li>
+        </ul>
+      </section>
+
+      <section class="contact-feedback">
+        <h2>Обратная связь</h2>
+        <form class="order-form">
+          <div class="form-group">
+            <label for="contact-name">Ваше имя *</label>
+            <input type="text" id="contact-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">E-mail *</label>
+            <input type="email" id="contact-email" name="email" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="contact-message">Сообщение</label>
+            <textarea id="contact-message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  </footer>
+</body>
+</html>

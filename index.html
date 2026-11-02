@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный frontend-проект интернет-кафе Star Hit Cafe.">
+  <title>Star Hit Cafe — Главная</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Star Hit Cafe - на главную">Star Hit Cafe</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Главная</a></li>
+          <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+          <li><a href="product.html" class="nav-link">Товар</a></li>
+          <li><a href="order.html" class="nav-link">Заказ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-content">
+    <section class="hero-section">
+      <div class="hero-text">
+        <h1 class="hero-title">Интернет-кафе</h1>
+        <p class="hero-desc">I just wanna be part of your symphony</p>
+        <a class="btn" href="#popular">Перейти к товарам</a>
+      </div>
+      
+      <!-- CSS КАРУСЕЛЬ -->
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img src="images/coffee-4.jpg" alt="Кофе 4" class="carousel-img">
+            <span class="carousel-caption">Кофе 4</span>
+          </div>
+          <div class="carousel-item">
+            <img src="images/coffee-5.jpg" alt="Кофе 5" class="carousel-img">
+            <span class="carousel-caption">Кофе 5</span>
+          </div>
+          <div class="carousel-item">
+            <img src="images/coffee-6.jpg" alt="Кофе 6" class="carousel-img">
+            <span class="carousel-caption">Кофе 6</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-img-container">
+        <img src="images/coffee-1.jpg" alt="Наш кофе" class="info-img">
+      </div>
+      <div class="info-content">
+        <h2 id="about-us">О нас</h2>
+        <ul class="info-list">
+          <li>Мы правда крутые</li>
+          <li>Правда-правда</li>
+        </ul>
+        <h2 id="advantages">Преимущества</h2>
+        <ul class="info-list">
+          <li>Закажи прямо сейчас</li>
+          <li>Удобство</li>
+          <li>Быстрота</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="popular" class="popular-section">
+      <h2>Популярные товары</h2>
+      <div class="products-grid">
+        <article class="product-card">
+          <h3>Товар 1</h3>
+          <p>Какое-то кофе 1.</p>
+          <p class="price">299 руб.</p>
+          <a href="product.html" class="btn">Подробнее</a>
+        </article>
+        <article class="product-card">
+          <h3>Товар 2</h3>
+          <p>Какое-то кофе 2.</p>
+          <p class="price">399 руб.</p>
+          <a href="product.html" class="btn">Подробнее</a>
+        </article>
+        <article class="product-card">
+          <h3>Товар 3</h3>
+          <p>Какое-то дорогое кофе 3.</p>
+          <p class="price">499 руб.</p>
+          <a href="product.html" class="btn">Подробнее</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

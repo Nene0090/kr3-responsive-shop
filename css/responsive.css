@@ -1,0 +1,26 @@
+/* Планшеты (от 768px) */
+@media (min-width: 768px) {
+  .header-inner { flex-direction: row; justify-content: space-between; }
+  .nav-list { flex-direction: row; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .info-section { flex-direction: row; }
+  .info-img-container { flex: 0 0 33%; }
+  .info-content { flex: 1; padding: 40px; }
+  .order-form { grid-template-columns: repeat(2, 1fr); }
+  .form-group.full-width { grid-column: 1 / -1; }
+  .catalog-layout { flex-direction: row; }
+  .filters { flex: 0 0 250px; }
+  .catalog-products { flex: 1; }
+  .carousel-img { height: 400px; }
+}
+
+/* Десктоп (от 1024px) */
+@media (min-width: 1024px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .product-detail { flex-direction: row; }
+  .product-image { flex: 0 0 50%; }
+  .product-info { flex: 1; }
+  .hero-section { display: flex; gap: 40px; align-items: center; }
+  .hero-text { flex: 1; }
+  .carousel { flex: 1; margin-top: 0; }
+}

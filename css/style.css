@@ -1,0 +1,97 @@
+:root {
+  --color-bg: #f4fdff;
+  --color-text: #011324;
+  --color-primary: #59effa;
+  --color-primary-dark: #089aa5;
+  --color-surface: #011324;
+  --color-border: #b6faff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Garamond', 'Times New Roman', serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  cursor: url('../images/cursor-normal.png'), auto;
+}
+
+a, button, .btn { cursor: url('../images/cursor-hover.png'), pointer; }
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus { top: 16px; }
+
+:focus-visible { outline: 3px solid var(--color-primary-dark); outline-offset: 3px; }
+
+.site-header { background: var(--color-surface); padding: 15px 20px; }
+.header-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.logo { font-size: 28px; color: var(--color-primary); text-decoration: none; font-weight: bold; }
+.nav-list { display: flex; flex-direction: column; gap: 8px; list-style: none; }
+.nav-link { color: var(--color-border); text-decoration: none; font-weight: bold; padding: 5px 10px; border-radius: 6px; display: block; text-align: center; }
+.nav-link:hover, .nav-link.active { background: var(--color-primary); color: var(--color-text); }
+
+.main-content { padding: 20px; max-width: 1200px; margin: 0 auto; }
+.page-title { margin-bottom: 20px; border-bottom: 3px solid var(--color-primary); display: inline-block; }
+
+.btn { display: inline-block; background: var(--color-primary); color: var(--color-text); padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; border: 2px solid var(--color-primary); transition: 0.2s; font-family: inherit; font-size: 16px; }
+.btn:hover { background: transparent; color: var(--color-primary-dark); }
+
+/* Блок О нас */
+.info-section { margin: 30px 0; display: flex; flex-direction: column; background: var(--color-surface); color: var(--color-border); border-radius: 12px; overflow: hidden; }
+.info-img-container { min-height: 200px; }
+.info-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.info-content { padding: 20px; }
+.info-content h2 { color: var(--color-primary); margin-bottom: 10px; }
+.info-list { margin-left: 20px; margin-bottom: 20px; }
+
+/* Сетка товаров */
+.products-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
+.product-card { background: #fff; padding: 20px; border-radius: 8px; border: 1px solid var(--color-border); }
+.price { font-weight: bold; font-size: 20px; color: var(--color-primary-dark); margin: 10px 0; }
+
+/* Карусель */
+.carousel { width: 100%; overflow: hidden; border-radius: 12px; position: relative; margin-top: 20px; }
+.carousel-inner { display: flex; animation: slide 12s infinite; width: 300%; }
+.carousel-item { width: 33.333%; position: relative; }
+.carousel-img { width: 100%; height: 250px; object-fit: cover; display: block; }
+.carousel-caption { position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.6); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 14px; }
+
+@keyframes slide {
+  0%, 25% { margin-left: 0; }
+  33%, 58% { margin-left: -100%; }
+  66%, 91% { margin-left: -200%; }
+  100% { margin-left: 0; }
+}
+
+/* Каталог и фильтры */
+.catalog-layout { display: flex; flex-direction: column; gap: 20px; }
+.filters { background: var(--color-surface); color: var(--color-border); padding: 15px; border-radius: 8px; }
+.filters h2 { color: var(--color-primary); margin-bottom: 10px; }
+.filters label { display: block; margin-bottom: 10px; }
+
+/* Страница товара */
+.product-detail { display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px; }
+.product-image img { width: 100%; border-radius: 8px; }
+
+/* Таблица */
+.table-wrapper { overflow-x: auto; margin-top: 15px; }
+.product-table { width: 100%; min-width: 400px; border-collapse: collapse; }
+.product-table th, .product-table td { padding: 10px; border: 1px solid var(--color-border); text-align: left; }
+.product-table caption { font-weight: bold; text-align: left; margin-bottom: 10px; }
+
+/* Форма */
+.order-form { display: grid; gap: 15px; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid var(--color-border); }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.order-form input, .order-form textarea { padding: 10px; border: 1px solid var(--color-border); border-radius: 6px; font-family: inherit; font-size: 16px; min-height: 44px; }
+
+.site-footer { background: var(--color-surface); color: var(--color-border); text-align: center; padding: 20px; margin-top: 40px; }
