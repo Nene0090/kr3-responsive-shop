@@ -15,9 +15,10 @@
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Главная</a></li>
-          <li><a href="catalog.html" class="nav-link active" aria-current="page">Каталог</a></li>
+          <li><a href="catalog.html" class="nav-link active">Каталог</a></li>
           <li><a href="product.html" class="nav-link">Товар</a></li>
           <li><a href="order.html" class="nav-link">Заказ</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -29,36 +30,47 @@
     <div class="catalog-layout">
       <aside class="filters">
         <h2>Фильтры</h2>
-        <form>
-          <label><input type="checkbox"> Популярные</label>
-          <label><input type="checkbox"> Новинки</label>
-          <button type="button" class="btn">Применить</button>
-        </form>
+        <div class="filter-group">
+          <h3>Категория</h3>
+          <label><input type="checkbox" class="filter-checkbox" value="hot"> Горячие</label>
+          <label><input type="checkbox" class="filter-checkbox" value="cold"> Холодные</label>
+          <label><input type="checkbox" class="filter-checkbox" value="new"> Новинки</label>
+        </div>
       </aside>
 
       <section class="catalog-products">
-        <div class="products-grid">
-          <article class="product-card">
+        <div class="products-grid" id="productGrid">
+          <article class="product-card" data-category="hot">
             <img src="images/coffee-1.jpg" alt="Кофе 1" class="card-img">
             <h3>Кофе 1</h3>
-            <a href="product.html" class="btn">Подробнее</a>
+            <p>Какое-то кофе 1.</p>
+            <p class="price">299 руб.</p>
+            <a href="product.html?id=1" class="btn">Подробнее</a>
           </article>
-          <article class="product-card">
+
+          <article class="product-card" data-category="cold new">
             <img src="images/coffee-2.jpg" alt="Кофе 2" class="card-img">
             <h3>Кофе 2</h3>
-            <a href="product.html" class="btn">Подробнее</a>
+            <p>Какое-то кофе 2.</p>
+            <p class="price">399 руб.</p>
+            <a href="product.html?id=2" class="btn">Подробнее</a>
           </article>
-          <article class="product-card">
+
+          <article class="product-card" data-category="hot new">
             <img src="images/coffee-3.jpg" alt="Кофе 3" class="card-img">
             <h3>Кофе 3</h3>
-            <a href="product.html" class="btn">Подробнее</a>
+            <p>Какое-то дорогое кофе 3.</p>
+            <p class="price">499 руб.</p>
+            <a href="product.html?id=3" class="btn">Подробнее</a>
           </article>
         </div>
       </section>
     </div>
   </main>
+
   <footer class="site-footer">
-    <p>&copy; 2026 Учебный проект.</p>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

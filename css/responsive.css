@@ -2,50 +2,28 @@
   .header-inner { flex-direction: row; justify-content: space-between; }
   .nav-list { flex-direction: row; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
+  
   .info-section { flex-direction: row; }
-  .info-img-container { flex: 0 0 33%; }
-  .info-content { flex: 1; padding: 40px; }
+  .info-img-container { width: 40%; height: auto; min-height: 400px; }
+  .info-content { flex: 1; padding: 50px; }
+  
   .order-form { grid-template-columns: repeat(2, 1fr); }
-  .form-group.full-width { grid-column: 1 / -1; }
-  .catalog-layout { flex-direction: row; }
-  .filters { flex: 0 0 250px; }
-  .catalog-products { flex: 1; }
-  .carousel-img { height: 400px; }
+  .full-width { grid-column: 1 / -1; }
+  .form-actions { display: flex; justify-content: center; }
+
+  .contacts-layout { flex-direction: row; align-items: flex-start; }
+  .contact-info { flex: 0 0 35%; }
+  .contact-feedback { flex: 1; }
 }
 
 @media (min-width: 1024px) {
   .products-grid { grid-template-columns: repeat(3, 1fr); }
-  .product-detail { flex-direction: row; }
+  .hero-section { flex-direction: row; align-items: center; justify-content: space-around; }
+  .hero-content { text-align: left; flex: 1; max-width: 500px; margin-bottom: 0; }
+  .hero-title { font-size: 64px; }
+  .carousel-container { flex: 1; max-width: 600px; margin: 0; }
+  
+  .product-detail { flex-direction: row; gap: 40px; }
   .product-image { flex: 0 0 50%; }
   .product-info { flex: 1; }
-  .hero-section { display: flex; gap: 40px; align-items: center; }
-  .hero-text { flex: 1; }
-  .carousel { flex: 1; margin-top: 0; }
-}
-
-.contacts-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.contact-info, .contact-feedback {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-}
-
-@media (min-width: 768px) {
-  .contacts-layout {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .contact-info {
-    flex: 0 0 35%;
-  }
-  .contact-feedback {
-    flex: 1;
-  }
 }

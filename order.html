@@ -17,7 +17,8 @@
           <li><a href="index.html" class="nav-link">Главная</a></li>
           <li><a href="catalog.html" class="nav-link">Каталог</a></li>
           <li><a href="product.html" class="nav-link">Товар</a></li>
-          <li><a href="order.html" class="nav-link active" aria-current="page">Заказ</a></li>
+          <li><a href="order.html" class="nav-link active">Заказ</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -25,27 +26,51 @@
 
   <main id="main" class="main-content">
     <h1 class="page-title">Оформление заказа</h1>
-    <form class="order-form">
+    <form class="order-form" id="orderForm">
       <div class="form-group">
         <label for="name">Имя *</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
       </div>
       <div class="form-group">
         <label for="email">E-mail *</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+      </div>
+      <div class="form-group">
+        <label for="phone">Телефон *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+7 (900) 000-00-00">
+      </div>
+      <div class="form-group">
+        <label for="date">Дата связи</label>
+        <input type="date" id="date" name="date">
+      </div>
+      <div class="form-group full-width">
+        <label for="product">Выберите товар *</label>
+        <select id="product" name="product" required>
+          <option value="">-- Выберите из списка --</option>
+          <option value="coffee-1">Товар 1 (299 руб.)</option>
+          <option value="coffee-2">Товар 2 (399 руб.)</option>
+          <option value="coffee-3">Товар 3 (499 руб.)</option>
+        </select>
       </div>
       <div class="form-group full-width">
         <label for="comment">Комментарий</label>
-        <textarea id="comment" name="comment" rows="4"></textarea>
+        <textarea id="comment" name="comment" rows="4" placeholder="Дополнительная информация"></textarea>
       </div>
       <div class="form-group full-width">
-        <label><input type="checkbox" required> Согласен на обработку данных *</label>
+        <label class="checkbox-label">
+          <input type="checkbox" required> Я согласен на обработку данных *
+        </label>
       </div>
-      <button type="submit" class="btn">Отправить</button>
+      <div class="form-actions full-width">
+        <button type="submit" class="btn">Отправить заявку</button>
+      </div>
     </form>
+    <p id="successMessage" class="success-msg" style="display: none;">Заявка успешно отправлена!</p>
   </main>
+
   <footer class="site-footer">
-    <p>&copy; 2026 Учебный проект.</p>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
