@@ -1,4 +1,3 @@
-/* Планшеты (от 768px) */
 @media (min-width: 768px) {
   .header-inner { flex-direction: row; justify-content: space-between; }
   .nav-list { flex-direction: row; }
@@ -14,7 +13,6 @@
   .carousel-img { height: 400px; }
 }
 
-/* Десктоп (от 1024px) */
 @media (min-width: 1024px) {
   .products-grid { grid-template-columns: repeat(3, 1fr); }
   .product-detail { flex-direction: row; }
@@ -23,4 +21,31 @@
   .hero-section { display: flex; gap: 40px; align-items: center; }
   .hero-text { flex: 1; }
   .carousel { flex: 1; margin-top: 0; }
+}
+
+.contacts-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-info, .contact-feedback {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .contacts-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .contact-info {
+    flex: 0 0 35%;
+  }
+  .contact-feedback {
+    flex: 1;
+  }
 }
