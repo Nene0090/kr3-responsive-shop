@@ -22,8 +22,17 @@
   .hero-content { text-align: left; flex: 1; max-width: 500px; margin-bottom: 0; }
   .hero-title { font-size: 64px; }
   .carousel-container { flex: 1; max-width: 600px; margin: 0; }
-  
-  .product-detail { flex-direction: row; gap: 40px; }
-  .product-image { flex: 0 0 50%; }
-  .product-info { flex: 1; }
+
+  .product-detail { 
+    display: flex; 
+    flex-direction: row; 
+    gap: 40px; 
+    align-items: flex-start;
+  }
+  .product-info { 
+    flex: 1;
+  }
+  .product-image { 
+    flex: 0 0 40%;
+  }
 }

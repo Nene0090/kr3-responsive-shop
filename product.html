@@ -1,58 +1,64 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Hit Cafe — Товар</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="logo" href="index.html">Star Hit Cafe</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Главная</a></li>
-          <li><a href="catalog.html" class="nav-link">Каталог</a></li>
-          <li><a href="product.html" class="nav-link active">Товар</a></li>
-          <li><a href="order.html" class="nav-link">Заказ</a></li>
-          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" class="main-content">
-    <h1 class="page-title" id="productTitle">Загрузка...</h1>
-    
-    <div class="product-detail">
-      <div class="product-image">
-        <img src="" alt="" id="productImage" class="main-img">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Hit Cafe — Товар</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">Star Hit Cafe</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+            <li><a href="product.html" class="nav-link active">Товар</a></li>
+            <li><a href="order.html" class="nav-link">Заказ</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="product-info">
-        <p class="price" id="productPrice"></p>
-        <p id="productDesc"></p>
-        <a href="order.html" class="btn" id="orderBtn">Оформить заявку</a>
+    </header>
+
+    <main id="main" class="main-content">
+      <h1 class="page-title" id="productTitle">Загрузка...</h1>
+
+      <div class="product-detail">
+        <div class="product-info">
+          <p class="price" id="productPrice"></p>
+          <p id="productDesc"></p>
+          <a href="order.html" class="btn" id="orderBtn">Оформить заявку</a>
+        </div>
+
+        <div class="product-image">
+          <img src="" alt="" id="productImage" class="main-img" />
+        </div>
       </div>
-    </div>
 
-    <h2>Характеристики</h2>
-    <div class="table-wrapper">
-      <table class="product-table">
-        <caption>Характеристики товара</caption>
-        <thead>
-          <tr><th>Параметр</th><th>Значение</th></tr>
-        </thead>
-        <tbody id="productSpecs"></tbody>
-      </table>
-    </div>
-  </main>
+      <h2>Характеристики</h2>
+      <div class="table-wrapper">
+        <table class="product-table styled-table">
+          <caption>
+            Характеристики товара
+          </caption>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Значение</th>
+            </tr>
+          </thead>
+          <tbody id="productSpecs"></tbody>
+        </table>
+      </div>
+    </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-  </footer>
-  <script src="js/main.js" defer></script>
-</body>
+    <footer class="site-footer">
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    </footer>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
