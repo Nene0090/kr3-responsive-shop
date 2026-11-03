@@ -133,8 +133,8 @@ main { flex: 1; }
 
 @media (max-width: 767px) {
   .info-img-container { height: 250px; }
-  .main-img { max-height: 300px; }
-  .carousel-img { height: 250px; }
-  .card-img { height: 180px; }
+  .main-img { aspect-ratio: 1 / 1; }
+  .carousel-img { aspect-ratio: 16 / 9; }
+  .card-img { aspect-ratio: 1 / 1; }
   .product-info .btn { margin-top: 10px; width: 100%; }
 }
