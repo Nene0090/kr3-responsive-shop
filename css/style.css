@@ -9,6 +9,10 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 body {
   font-family: 'Garamond', 'Times New Roman', serif;
   background-color: var(--color-bg);
@@ -114,8 +118,8 @@ main { flex: 1; }
 .contact-info, .contact-feedback { background: #fff; padding: 30px; border-radius: 10px; border: 1px solid var(--color-border); }
 .contact-info h2, .contact-feedback h2 { margin-bottom: 20px; color: var(--color-primary-dark); }
 
-.card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-.main-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 12px; }
+.card-img { width: 100%; height: auto; max-width:100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+.main-img { width: 100%; height: auto; max-width:100%; max-height: 400px; object-fit: contain; border-radius: 12px; }
 
 .site-footer { background: var(--color-surface); color: var(--color-border); text-align: center; padding: 30px 20px; }
 
