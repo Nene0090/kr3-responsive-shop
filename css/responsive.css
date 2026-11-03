@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
   .header-inner { flex-direction: row; justify-content: space-between; }
   .nav-list { flex-direction: row; }
+  
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   
   .info-section { flex-direction: row; }
@@ -22,17 +23,8 @@
   .hero-content { text-align: left; flex: 1; max-width: 500px; margin-bottom: 0; }
   .hero-title { font-size: 64px; }
   .carousel-container { flex: 1; max-width: 600px; margin: 0; }
-
-  .product-detail { 
-    display: flex; 
-    flex-direction: row; 
-    gap: 40px; 
-    align-items: flex-start;
-  }
-  .product-info { 
-    flex: 1;
-  }
-  .product-image { 
-    flex: 0 0 40%;
-  }
+  
+  .product-detail { display: flex; flex-direction: row; gap: 40px; align-items: flex-start; }
+  .product-info { flex: 1; }
+  .product-image { flex: 0 0 40%; }
 }
