@@ -93,4 +93,41 @@ document.addEventListener("DOMContentLoaded", () => {
       "3": { title: "Товар 3", price: "499 руб.", desc: "Какое-то дорогое кофе 3. Премиальный сорт.", img: "images/coffee-3.jpg", specs: { "Объем": "200 мл", "Состав": "Эспрессо, сливки", "Калорийность": "200 ккал" } }
     };
 
-    const urlParams = new URLSearchParams
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id") || "1";
+    const product = productsData[productId];
+
+    if (product) {
+      productTitle.textContent = product.title;
+      document.title = `Star Hit Cafe — ${product.title}`;
+      document.getElementById("productPrice").textContent = product.price;
+      document.getElementById("productDesc").textContent = product.desc;
+      
+      const imgElement = document.getElementById("productImage");
+      imgElement.src = product.img;
+      imgElement.alt = product.title;
+
+      const specsBody = document.getElementById("productSpecs");
+      specsBody.innerHTML = "";
+      for (const [key, value] of Object.entries(product.specs)) {
+        specsBody.innerHTML += `<tr><td>${key}</td><td>${value}</td></tr>`;
+      }
+    }
+  }
+
+  const form = document.getElementById("orderForm");
+  const successMessage = document.getElementById("successMessage");
+
+  if (form && successMessage) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      successMessage.style.display = "block";
+      successMessage.style.color = "#089aa5";
+      successMessage.style.fontWeight = "bold";
+      successMessage.style.marginTop = "20px";
+      successMessage.style.textAlign = "center";
+      form.reset();
+      setTimeout(() => { successMessage.style.display = "none"; }, 4000);
+    });
+  }
+});
