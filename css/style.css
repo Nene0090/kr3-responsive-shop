@@ -108,7 +108,6 @@ main { flex: 1; }
   min-width: 100%; 
   position: relative; 
   height: 400px; 
-  background-color: var(--color-surface); 
 }
 .carousel-img { 
   width: 100%; 
@@ -116,6 +115,7 @@ main { flex: 1; }
   object-fit: contain; 
   display: block; 
   padding: 10px; 
+  background-color: var(--color-surface); 
 }
 .carousel-caption { position: absolute; bottom: 15px; left: 15px; background: #ffffff; color: var(--color-surface); padding: 6px 12px; border-radius: 4px; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
 .carousel-controls { display: flex; justify-content: center; gap: 20px; margin-top: 15px; }
