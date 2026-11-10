@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
+  // 1. БУРГЕР-МЕНЮ
   const menuToggle = document.getElementById("menuToggle");
   const navList = document.getElementById("navList");
 
@@ -10,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 2. КАРУСЕЛЬ (с автопрокруткой)
   const track = document.getElementById("carouselTrack");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
@@ -61,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 3. ФИЛЬТРЫ В КАТАЛОГЕ
   const filterCheckboxes = document.querySelectorAll(".filter-checkbox");
   const productCards = document.querySelectorAll(".product-card");
 
@@ -84,31 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 4. СТРАНИЦА ТОВАРА (подстановка данных)
   const productTitle = document.getElementById("productTitle");
   
   if (productTitle) {
     const productsData = {
-      "1": { 
-        title: "Товар 1", 
-        price: "299 руб.", 
-        desc: "Какое-то кофе 1. Вкусный и бодрящий напиток.", 
-        img: "images/coffee-1.jpg", 
-        specs: { "Объем": "300 мл", "Состав": "Кофе, молоко", "Калорийность": "150 ккал" } 
-      },
-      "2": { 
-        title: "Товар 2", 
-        price: "399 руб.", 
-        desc: "Какое-то кофе 2. Освежающий и холодный.", 
-        img: "images/coffee-2.jpg", 
-        specs: { "Объем": "400 мл", "Состав": "Кофе, лед, сироп", "Калорийность": "120 ккал" } 
-      },
-      "3": { 
-        title: "Товар 3", 
-        price: "499 руб.", 
-        desc: "Какое-то дорогое кофе 3. Премиальный сорт.", 
-        img: "images/coffee-3.jpg", 
-        specs: { "Объем": "200 мл", "Состав": "Эспрессо, сливки", "Калорийность": "200 ккал" } 
-      }
+      "1": { title: "Товар 1", price: "299 руб.", desc: "Какое-то кофе 1. Вкусный и бодрящий напиток.", img: "images/coffee-1.jpg", specs: { "Объем": "300 мл", "Состав": "Кофе, молоко", "Калорийность": "150 ккал" } },
+      "2": { title: "Товар 2", price: "399 руб.", desc: "Какое-то кофе 2. Освежающий и холодный.", img: "images/coffee-2.jpg", specs: { "Объем": "400 мл", "Состав": "Кофе, лед, сироп", "Калорийность": "120 ккал" } },
+      "3": { title: "Товар 3", price: "499 руб.", desc: "Какое-то дорогое кофе 3. Премиальный сорт.", img: "images/coffee-3.jpg", specs: { "Объем": "200 мл", "Состав": "Эспрессо, сливки", "Калорийность": "200 ккал" } }
     };
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -133,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 5. ФОРМА ЗАКАЗА
   const form = document.getElementById("orderForm");
   const successMessage = document.getElementById("successMessage");
 
