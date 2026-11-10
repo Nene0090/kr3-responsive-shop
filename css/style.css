@@ -104,10 +104,15 @@ main { flex: 1; }
   overflow: hidden; 
 }
 .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
-.carousel-item { min-width: 100%; position: relative; background-color: var(--color-surface); }
+.carousel-item { 
+  min-width: 100%; 
+  position: relative; 
+  height: 400px; 
+  background-color: var(--color-surface); 
+}
 .carousel-img { 
   width: 100%; 
-  height: 400px; 
+  height: 100%; 
   object-fit: contain; 
   display: block; 
   padding: 10px; 
@@ -181,7 +186,7 @@ main { flex: 1; }
     object-fit: contain;
     padding: 5px;
   }
-  .carousel-img { height: 250px; }
+  .carousel-item { height: 250px; }
   .main-img { height: 300px; }
   .card-img { height: 200px; }
   .product-info .btn { margin-top: 10px; width: 100%; }
