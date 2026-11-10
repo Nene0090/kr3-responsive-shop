@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navList = document.getElementById("navList");
+
+  if (menuToggle && navList) {
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("active");
+      const isExpanded = navList.classList.contains("active");
+      menuToggle.setAttribute("aria-expanded", isExpanded);
+    });
+  }
+
   const track = document.getElementById("carouselTrack");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
@@ -6,20 +17,48 @@ document.addEventListener("DOMContentLoaded", () => {
   if (track && prevBtn && nextBtn) {
     let currentIndex = 0;
     const totalSlides = track.children.length;
+    let autoPlayInterval;
 
     function updateCarousel() {
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    nextBtn.addEventListener("click", () => {
+    function nextSlide() {
       currentIndex = (currentIndex + 1) % totalSlides;
       updateCarousel();
+    }
+
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      resetAutoPlay();
     });
 
     prevBtn.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
       updateCarousel();
+      resetAutoPlay();
     });
+
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextSlide, 4000);
+    }
+
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+
+    function resetAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    startAutoPlay();
+
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+      carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    }
   }
 
   const filterCheckboxes = document.querySelectorAll(".filter-checkbox");
