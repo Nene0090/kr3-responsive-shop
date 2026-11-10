@@ -95,9 +95,16 @@ main { flex: 1; }
 .hero-title { font-size: 48px; color: var(--color-primary-dark); margin-bottom: 10px; }
 .hero-desc { font-size: 22px; margin-bottom: 25px; color: var(--color-text); }
 
-.carousel-container { position: relative; max-width: 800px; margin: 0 auto; width: 100%; border-radius: 12px; overflow: hidden; background-color: var(--color-surface); }
+.carousel-container { 
+  position: relative; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  width: 100%; 
+  border-radius: 12px; 
+  overflow: hidden; 
+}
 .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
-.carousel-item { min-width: 100%; position: relative; }
+.carousel-item { min-width: 100%; position: relative; background-color: var(--color-surface); }
 .carousel-img { 
   width: 100%; 
   height: 400px; 
