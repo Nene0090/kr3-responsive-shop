@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   
-  // 1. БУРГЕР-МЕНЮ
   const menuToggle = document.getElementById("menuToggle");
   const navList = document.getElementById("navList");
 
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 2. КАРУСЕЛЬ (с автопрокруткой)
   const track = document.getElementById("carouselTrack");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 3. ФИЛЬТРЫ В КАТАЛОГЕ
   const filterCheckboxes = document.querySelectorAll(".filter-checkbox");
   const productCards = document.querySelectorAll(".product-card");
 
@@ -88,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 4. СТРАНИЦА ТОВАРА (подстановка данных)
   const productTitle = document.getElementById("productTitle");
   
   if (productTitle) {
@@ -120,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 5. ФОРМА ЗАКАЗА
   const form = document.getElementById("orderForm");
   const successMessage = document.getElementById("successMessage");
 
