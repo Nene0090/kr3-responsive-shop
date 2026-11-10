@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
   .header-inner { flex-direction: row; justify-content: space-between; }
-  .nav-list { flex-direction: row; }
+  .menu-toggle { display: none; }
+  .nav-list { display: flex !important; flex-direction: row; background: transparent; padding: 0; width: auto; }
   
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   
