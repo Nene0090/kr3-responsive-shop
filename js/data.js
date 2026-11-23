@@ -1,0 +1,122 @@
+const products = [
+  {
+    id: 1,
+    title: 'Карамельный Раф',
+    category: 'hot',
+    price: 199,
+    discountPercent: 0,
+    rating: 4.8,
+    isAvailable: true,
+    image: 'images/coffee-1.jpg',
+    description: 'Крепкий эспрессо из свежеобжаренных зёрен.',
+    specs: { 'Объём': '40 мл', 'Состав': 'Кофе, вода', 'Калорийность': '5 ккал' }
+  },
+  {
+    id: 2,
+    title: 'Тыквенный Пряный Латте',
+    category: 'hot',
+    price: 299,
+    discountPercent: 10,
+    rating: 4.7,
+    isAvailable: true,
+    image: 'images/coffee-2.jpg',
+    description: 'Эспрессо с нежной молочной пенкой.',
+    specs: { 'Объём': '300 мл', 'Состав': 'Кофе, молоко', 'Калорийность': '150 ккал' }
+  },
+  {
+    id: 3,
+    title: 'Шоколадный Латте',
+    category: 'hot',
+    price: 349,
+    discountPercent: 0,
+    rating: 4.6,
+    isAvailable: true,
+    image: 'images/coffee-3.jpg',
+    description: 'Мягкий латте с карамельным сиропом.',
+    specs: { 'Объём': '350 мл', 'Состав': 'Кофе, молоко, карамель', 'Калорийность': '180 ккал' }
+  },
+  {
+    id: 4,
+    title: 'Айс-Латте',
+    category: 'cold',
+    price: 329,
+    discountPercent: 5,
+    rating: 4.5,
+    isAvailable: true,
+    image: 'images/coffee-4.jpg',
+    description: 'Освежающий латте со льдом.',
+    specs: { 'Объём': '400 мл', 'Состав': 'Кофе, молоко, лёд', 'Калорийность': '120 ккал' }
+  },
+  {
+    id: 5,
+    title: 'Фраппе Мокка',
+    category: 'cold',
+    price: 399,
+    discountPercent: 0,
+    rating: 4.9,
+    isAvailable: false,
+    image: 'images/coffee-5.jpg',
+    description: 'Холодный кофейный напиток с шоколадом.',
+    specs: { 'Объём': '450 мл', 'Состав': 'Кофе, молоко, шоколад, лёд', 'Калорийность': '210 ккал' }
+  },
+  {
+    id: 6,
+    title: 'Колд Брю',
+    category: 'cold',
+    price: 359,
+    discountPercent: 10,
+    rating: 4.7,
+    isAvailable: true,
+    image: 'images/coffee-6.jpg',
+    description: 'Кофе холодного заваривания.',
+    specs: { 'Объём': '400 мл', 'Состав': 'Кофе, вода, лёд', 'Калорийность': '10 ккал' }
+  },
+  {
+    id: 7,
+    title: 'Чизкейк Нью-Йорк',
+    category: 'dessert',
+    price: 449,
+    discountPercent: 0,
+    rating: 4.9,
+    isAvailable: true,
+    image: 'images/coffee-7.jpg',
+    description: 'Классический чизкейк на песочной основе.',
+    specs: { 'Вес': '120 г', 'Состав': 'Сыр, сливки, печенье', 'Калорийность': '320 ккал' }
+  },
+  {
+    id: 8,
+    title: 'Тирамису',
+    category: 'dessert',
+    price: 499,
+    discountPercent: 5,
+    rating: 4.8,
+    isAvailable: true,
+    image: 'images/coffee-8.jpg',
+    description: 'Итальянский десерт с маскарпоне и кофе.',
+    specs: { 'Вес': '110 г', 'Состав': 'Маскарпоне, кофе, печенье', 'Калорийность': '290 ккал' }
+  },
+  {
+    id: 9,
+    title: 'Брауни',
+    category: 'dessert',
+    price: 289,
+    discountPercent: 0,
+    rating: 4.6,
+    isAvailable: true,
+    image: 'images/coffee-9.jpg',
+    description: 'Шоколадный брауни с грецким орехом.',
+    specs: { 'Вес': '100 г', 'Состав': 'Шоколад, масло, орех', 'Калорийность': '380 ккал' }
+  },
+  {
+    id: 10,
+    title: 'Круассан',
+    category: 'dessert',
+    price: 199,
+    discountPercent: 0,
+    rating: 4.5,
+    isAvailable: false,
+    image: 'images/coffee-10.jpg',
+    description: 'Слоёный круассан с маслом.',
+    specs: { 'Вес': '80 г', 'Состав': 'Мука, масло, дрожжи', 'Калорийность': '260 ккал' }
+  }
+];

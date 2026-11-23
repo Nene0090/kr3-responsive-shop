@@ -9,6 +9,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">Star Hit Cafe</a>
@@ -22,36 +23,73 @@
           <li><a href="contacts.html" class="nav-link">Контакты</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <button class="header-action" id="themeToggle" type="button" aria-pressed="false">Тёмная тема</button>
+        <a class="header-action favorites-counter" href="catalog.html">Избранное: 0</a>
+        <a class="header-action cart-counter" href="order.html">Корзина: 0</a>
+      </div>
     </div>
   </header>
 
   <main id="main" class="main-content">
     <h1 class="page-title">Оформление заказа</h1>
-    <form class="order-form" id="orderForm">
+
+    <section class="cart-section" aria-labelledby="cart-title">
+      <h2 id="cart-title">Корзина</h2>
+      <p class="cart-empty" data-cart-empty hidden>Корзина пуста.</p>
+      <div class="cart-list" data-cart-container></div>
+
+      <div class="cart-promo">
+        <label for="promo-input">Промокод</label>
+        <div class="cart-promo__row">
+          <input id="promo-input" class="cart-promo__input" type="text" placeholder="STAR10, HIT20, CAFE15" autocomplete="off">
+          <button id="promo-apply" class="btn btn--small" type="button">Применить</button>
+        </div>
+        <p id="promo-message" class="promo-message" aria-live="polite"></p>
+      </div>
+
+      <div class="cart-summary" data-cart-summary></div>
+    </section>
+
+    <h2 class="order-subtitle">Данные для заявки</h2>
+
+    <form class="order-form" id="orderForm" novalidate>
       <div class="form-group">
         <label for="name">Имя *</label>
-        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+        <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+        <p class="form-error" id="name-error"></p>
       </div>
       <div class="form-group">
         <label for="email">E-mail *</label>
-        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+        <input type="email" id="email" name="email" placeholder="example@mail.ru">
+        <p class="form-error" id="email-error"></p>
       </div>
       <div class="form-group">
         <label for="phone">Телефон *</label>
-        <input type="tel" id="phone" name="phone" required placeholder="+7 (900) 000-00-00">
+        <input type="tel" id="phone" name="phone" placeholder="+7 (900) 000-00-00">
+        <p class="form-error" id="phone-error"></p>
       </div>
       <div class="form-group">
         <label for="date">Дата связи</label>
         <input type="date" id="date" name="date">
+        <p class="form-error" id="date-error"></p>
       </div>
       <div class="form-group full-width">
         <label for="product">Выберите товар *</label>
-        <select id="product" name="product" required>
+        <select id="product" name="product">
           <option value="">-- Выберите из списка --</option>
-          <option value="coffee-1">Товар 1 (299 руб.)</option>
-          <option value="coffee-2">Товар 2 (399 руб.)</option>
-          <option value="coffee-3">Товар 3 (499 руб.)</option>
+          <option value="1">Карамельный Раф</option>
+          <option value="2">Тыквенный Пряный Латте</option>
+          <option value="3">Шоколадный Латте</option>
+          <option value="4">Айс-Латте</option>
+          <option value="5">Фраппе Мокка</option>
+          <option value="6">Колд Брю</option>
+          <option value="7">Чизкейк Нью-Йорк</option>
+          <option value="8">Тирамису</option>
+          <option value="9">Брауни</option>
+          <option value="10">Круассан</option>
         </select>
+        <p class="form-error" id="product-error"></p>
       </div>
       <div class="form-group full-width">
         <label for="comment">Комментарий</label>
@@ -59,19 +97,25 @@
       </div>
       <div class="form-group full-width">
         <label class="checkbox-label">
-          <input type="checkbox" required> Я согласен на обработку данных *
+          <input type="checkbox" id="agreement" name="agreement"> Я согласен на обработку данных *
         </label>
+        <p class="form-error" id="agreement-error"></p>
       </div>
       <div class="form-actions full-width">
         <button type="submit" class="btn">Отправить заявку</button>
       </div>
+      <p class="form-message full-width" aria-live="polite"></p>
     </form>
-    <p id="successMessage" class="success-msg" style="display: none;">Заявка успешно отправлена!</p>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/validation.js" defer></script>
+  <script src="js/theme.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">Star Hit Cafe</a>
@@ -22,12 +23,17 @@
           <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <button class="header-action" id="themeToggle" type="button" aria-pressed="false">Тёмная тема</button>
+        <a class="header-action favorites-counter" href="catalog.html">Избранное: 0</a>
+        <a class="header-action cart-counter" href="order.html">Корзина: 0</a>
+      </div>
     </div>
   </header>
 
   <main id="main" class="main-content">
     <h1 class="page-title">Контакты</h1>
-    
+
     <div class="contacts-layout">
       <section class="contact-info">
         <h2>Наши контакты</h2>
@@ -40,20 +46,25 @@
 
       <section class="contact-feedback">
         <h2>Обратная связь</h2>
-        <form class="order-form">
+        <form class="order-form" id="contactsForm" novalidate>
           <div class="form-group">
             <label for="contact-name">Ваше имя *</label>
-            <input type="text" id="contact-name" name="name" required>
+            <input type="text" id="contact-name" name="name" placeholder="Введите ваше имя">
+            <p class="form-error" id="contact-name-error"></p>
           </div>
           <div class="form-group">
             <label for="contact-email">E-mail *</label>
-            <input type="email" id="contact-email" name="email" required>
+            <input type="email" id="contact-email" name="email" placeholder="example@mail.ru">
+            <p class="form-error" id="contact-email-error"></p>
           </div>
           <div class="form-group full-width">
             <label for="contact-message">Сообщение</label>
-            <textarea id="contact-message" name="message" rows="4"></textarea>
+            <textarea id="contact-message" name="message" rows="4" placeholder="Ваше сообщение"></textarea>
           </div>
-          <button type="submit" class="btn">Отправить</button>
+          <div class="form-actions full-width">
+            <button type="submit" class="btn">Отправить</button>
+          </div>
+          <p class="form-message full-width" aria-live="polite"></p>
         </form>
       </section>
     </div>
@@ -62,6 +73,9 @@
   <footer class="site-footer">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
+
+  <script src="js/validation.js" defer></script>
+  <script src="js/theme.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

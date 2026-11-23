@@ -23,16 +23,24 @@
           <li><a href="contacts.html" class="nav-link">Контакты</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <button class="header-action" id="themeToggle" type="button" aria-pressed="false">Тёмная тема</button>
+        <a class="header-action favorites-counter" href="catalog.html">Избранное: 0</a>
+        <a class="header-action cart-counter" href="order.html">Корзина: 0</a>
+      </div>
     </div>
   </header>
 
   <main id="main" class="main-content">
     <h1 class="page-title" id="productTitle">Загрузка...</h1>
-    
+
     <div class="product-detail">
       <div class="product-info">
+        <p class="product-detail__rating" id="productRating"></p>
         <p class="price" id="productPrice"></p>
         <p id="productDesc"></p>
+        <p class="product-detail__status" id="productStatus"></p>
+        <button class="btn btn--accent" id="productAddBtn" type="button">В корзину</button>
         <a href="order.html" class="btn" id="orderBtn">Оформить заявку</a>
       </div>
       <div class="product-image">
@@ -55,6 +63,10 @@
   <footer class="site-footer">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
   </footer>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/product.js" defer></script>
+  <script src="js/theme.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
